@@ -16,7 +16,7 @@ In this dockerfile, brainageR relies in Octave instead of Matlab.
 
 Within this brainageR docker, we reset the header realigning the input image to MNI to ensure all values are in the proper range. This procedure overwrites the input file.
 
-~ Singularity
+- Singularity
 
 We added a singularity container which does not need root privilleges, thus is ideal for shared multiuser systems and in high performance computing (HPC) environments).
 To analyze a raw T1-weighted MRI scan run the following command:
