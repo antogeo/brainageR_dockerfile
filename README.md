@@ -16,6 +16,13 @@ In this dockerfile, brainageR relies in Octave instead of Matlab.
 
 Within this brainageR docker, we reset the header realigning the input image to MNI to ensure all values are in the proper range. This procedure overwrites the input file.
 
+Singularity
+We added a singularity container which does not need root privilleges, thus is ideal for shared multiuser systems and in high performance computing (HPC) environments).
+To analyze a raw T1-weighted MRI scan run the following command:
+       
+       singularity exec --bind /home/antogeo/data/:/home/antogeo /path/tocontainer/brainageR2.1.sif brainageR -f sub-CC520122_T1w.nii -o subj01_brain_predicted.age.csv
+
+
 Links for required softwares:
 
 ·BrainageR: https://github.com/james-cole/brainageR
